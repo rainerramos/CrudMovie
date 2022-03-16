@@ -3,9 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{3909F8DF-E81D-4B96-BB63-54CACEA9A3D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CM.Domain", "CS.Domain\CM.Domain.csproj", "{6976FFDD-E5F4-4F15-9066-07F035D2BC82}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{B1FD71B9-C2EB-4CC4-AC76-4C3F4F7986AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CM.Data", "CM.Data\CM.Data.csproj", "{77EF9F75-38ED-4D62-AB91-5C1D29351F40}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6976FFDD-E5F4-4F15-9066-07F035D2BC82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6976FFDD-E5F4-4F15-9066-07F035D2BC82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6976FFDD-E5F4-4F15-9066-07F035D2BC82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6976FFDD-E5F4-4F15-9066-07F035D2BC82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77EF9F75-38ED-4D62-AB91-5C1D29351F40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EF9F75-38ED-4D62-AB91-5C1D29351F40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EF9F75-38ED-4D62-AB91-5C1D29351F40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EF9F75-38ED-4D62-AB91-5C1D29351F40}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6976FFDD-E5F4-4F15-9066-07F035D2BC82} = {3909F8DF-E81D-4B96-BB63-54CACEA9A3D3}
+		{77EF9F75-38ED-4D62-AB91-5C1D29351F40} = {B1FD71B9-C2EB-4CC4-AC76-4C3F4F7986AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D18E827C-05B6-4709-AEF4-2C492188FD8B}
