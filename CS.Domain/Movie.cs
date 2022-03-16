@@ -1,5 +1,9 @@
-﻿namespace CM.Domain
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace CM.Domain
 {
+    [Table("Movie")]
     public class Movie
     {
         public Movie()
@@ -8,8 +12,10 @@
         }
 
         public Guid Id { get; private set; }
-        public string Title { get; set; }
-        public DateTime Date { get; set; }
+
+        [Required]
+        public string Title { get; set; }        
+        public DateTime ReleaseDate { get; set; }        
         public string Sinopse { get; set; }
         public string Cast { get; set; }
 
