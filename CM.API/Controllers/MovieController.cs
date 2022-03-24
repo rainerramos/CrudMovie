@@ -29,5 +29,26 @@ namespace CM.API.Controllers
             _movieService.Add(movie);
             return StatusCode(201);
         }
+
+        [HttpDelete("{id}")]
+        public IActionResult Delete(Guid id)
+        {
+            _movieService.Delete(id);
+            return NoContent();
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetById(Guid id)
+        {
+            Movie movie = _movieService.GetById(id);
+            return Ok(movie);
+        }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(Guid id, Movie movie)
+        {
+            _movieService.Update(id, movie);
+            return NoContent();
+        }
     }
 }

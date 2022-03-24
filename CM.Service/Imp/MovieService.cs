@@ -31,9 +31,9 @@ namespace CM.Service.Imp
             _repository.Delete(id);
         }
 
-        public Movie Get(Guid id)
+        public Movie GetById(Guid id)
         {
-            return _repository.Get(id);
+            return _repository.GetById(id);
         }
 
         public IEnumerable<Movie> GetAll()

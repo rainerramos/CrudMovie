@@ -1,5 +1,6 @@
 ﻿using CM.Data.Interfaces;
 using CM.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace CM.Data.Imp
 {
@@ -20,7 +21,7 @@ namespace CM.Data.Imp
 
         public void Delete(Guid id)
         {
-            Movie movie = Get(id);
+            Movie movie = GetById(id);
 
             if (movie != null)
             {
@@ -29,9 +30,9 @@ namespace CM.Data.Imp
             }
         }
 
-        public Movie Get(Guid id)
+        public Movie GetById(Guid id)
         {
-           return _db.Movies.First(x => x.Id == id);
+           return _db.Movies.AsNoTracking().FirstOrDefault(x => x.Id == id);
         }
 
         public IEnumerable<Movie> GetAll()
@@ -41,7 +42,7 @@ namespace CM.Data.Imp
 
         public void Update(Guid id, Movie movieDTO)
         {
-            Movie movie = Get(id);
+            Movie movie = GetById(id);
             
             if (movie != null)
             {
@@ -50,5 +51,6 @@ namespace CM.Data.Imp
                 _db.SaveChanges();
             }
         }
+
     }
 }

@@ -14,9 +14,11 @@ namespace CM.Domain
         public Guid Id { get; private set; }
 
         [Required]
-        public string Title { get; set; }        
+        public string Title { get; set; }     
+
+        [Required(ErrorMessage ="ReleaseDate é obrigatório")]
         public DateTime ReleaseDate { get; set; }        
-        public string Sinopse { get; set; }
+        public string Sinopse { get; set; }        
         public string Cast { get; set; }
 
         public void SetId(Guid id)

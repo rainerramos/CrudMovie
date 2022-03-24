@@ -6,7 +6,7 @@ namespace CM.Data.Interfaces
     {
         void Add(Movie movie);
         IEnumerable<Movie> GetAll();
-        Movie Get(Guid id);
+        Movie GetById(Guid id);
         void Update(Guid id, Movie movie);
         void Delete(Guid id);
 
